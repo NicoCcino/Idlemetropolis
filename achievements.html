@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="css/jeu.css" />
+    <title>Idle metropolis</title>
+    <script src='https://cdn1.kongregate.com/javascripts/kongregate_api.js'></script>
+</head>
+
+<body>
+<!--
+<div id="conteneurCorps" class="conteneur">
+<div id="conteneurColonneGauche" class="conteneurColonne">
+	<nav>
+		<div id="boutons">
+			<button id="boutonBoisUpgrade" onclick="boisUpgrade()"></button>
+			<button id="boutonBoisStockUpgrade" onclick="boisStockUpgrade()"></button>
+			<button id="boutonMaisonBoisBuy" onclick="maisonBoisBuy()"></button>
+			<button id="boutonPierreUpgrade" onclick="pierreUpgrade()"></button>
+			<button id="boutonPierreStockUpgrade" onclick="pierreStockUpgrade()"></button>
+			<button id="boutonMaisonPierreBuy" onclick="maisonPierreBuy()"></button>
+			<button id="boutonOrUpgrade" onclick="orUpgrade()"></button>
+			<button id="boutonOrStockUpgrade" onclick="orStockUpgrade()"></button>
+			<button id="boutonChateauBuy" onclick="chateauBuy()"></button>
+		</div> 
+	</nav>
+	</br>
+	<div id="production">
+		<div id="boisProduction" class="production"></div>
+		<div id="pierreProduction" class="production"></div>
+		<div id="orProduction" class="production"></div>
+	</div>
+</div>
+<div id="Ressources" class="conteneurColonne">
+	<div id="boisConteneur" class="conteneur"> <img id="boisImage" src ="bois.png"></img><div id="bois"></div><div id="boisStock" class="stock"></div><img id="maisonBoisImage" src ="maisonBois.jpg"></img><div id="maisonBois"></div></div>
+	<div id="pierreConteneur" class="conteneur"> <img id="pierreImage" src ="pierre.jpg"></img><div id="pierre"></div><div id="pierreStock" class="stock"></div><img id="maisonPierreImage" src ="maisonPierre.png"></img><div id="maisonPierre"></div></div>
+	<div id="orConteneur" class="conteneur"> <img id="orImage" src ="or.png"></img><div id="or"></div><div id="orStock" class="stock"></div><img id="chateauImage" src ="chateau.png"></img><div id="chateau"></div></div>
+</div>
+</div>
+
+</br>
+</br>
+	<div id="populationConteneur" class="conteneur">
+
+		<div id="conteneurHomme" class="conteneurColonne"><img id="hommeImage" src ="homme.png"></img><div id="homme"></div></div>
+		<div id="conteneurFemme" class="conteneurColonne"><img id="femmeImage" src ="femme.png"></img><div id="femme"></div></div>
+		<div id="conteneurBébé" class="conteneurColonne"><img id="bébéImage" src ="bébé.png"></img><div id="bébé"></div></div>
+	</div>
+</br>
+</br>
+</br>
+
+
+</br>
+-->
+<table id="tableauAchievements">
+<!--
+   <tr> Ligne </tr>
+   <td> Colonne </td> 
+-->
+   <tr>
+       <td id="imageBadgeVillage" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeVillage" class="nomBadge">Village</td>
+       <td id="imageBadgeBoisNombre5000" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeBoisNombre5000" class="nomBadge">Bûcheron</td>
+       <td id="imageBadgeClicNombre1" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeClicNombre1" class="nomBadge">Et si je cliquais là?</td>
+   </tr>
+   <tr>
+       <td id="imageBadgeVille" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeVille" class="nomBadge">Ville</td>
+       <td id="imageBadgePierreNombre5000" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgePierreNombre5000" class="nomBadge">Tailleur de pierre</td>
+       <td id="imageBadgeClicNombre100" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeClicNombre100" class="nomBadge">Impatient</td>
+   </tr>
+   <tr>
+       <td id="imageBadgeMetropole" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeMetropole" class="nomBadge">Métropole</td>
+       <td id="imageBadgeOrNombre5000" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeOrNombre5000" class="nomBadge">Chercheur d'or</td>
+       <td id="imageBadgeClicNombre1000" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeClicNombre1000" class="nomBadge">J'en veux encore</td>
+   </tr>
+   <tr>
+       <td id="imageBadgeVillageTrader" class="hidden"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeVillageTrader" class="hidden">Village de trader</td>
+       <td></td>
+       <td></td>
+       <td id="imageBadgeClicNombre10000" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeClicNombre10000" class="nomBadge">Clic clic clic</td>
+   </tr>
+   <tr class="hidden">
+       <td id="imageBadgeVilleTrader" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeVilleTrader" class="nomBadge">Ville de trader</td>
+   </tr>
+   <tr class="hidden">
+       <td id="imageBadgeMetropoleTrader" class="image"><img src="badgePetitNb.png"></img></td>
+       <td id="texteBadgeMetropoleTrader" class="nomBadge">Métropole de trader</td>
+   </tr>
+
+</table>
+
+</br>
+
+<div id="settings" class="conteneurColonne">
+<div class="conteneur">
+	<button id="index" onclick="window.location.replace('index.html')">Production</button>
+  <button id="boutonReset" onclick="reset()">Restart from scratch</button>
+</div>
+<div class="conteneur">
+	<button id="boutonLangueEN" class="boutonLangue" onclick="langueEN()"><img id="imageUS" src='drapeau_us.png'></img></button>
+	<button id="boutonLangueFR" class="boutonLangue" onclick="langueFR()"><img id="imageFrance" src='drapeau_france.png'></img></button>
+</div>
+<div id="alertePause"></div>
+</div>
+    <script src="js/jeu.js"></script>
+</body>
+
+
+
+</html>

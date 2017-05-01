@@ -1,0 +1,365 @@
+*{
+	background-color:white;
+}
+
+.conteneur
+{
+	display:flex;
+}
+
+.conteneurColonne
+{
+	display:flex;
+	flex-direction:column;
+}
+
+#homme
+{
+	text-align:center;
+	margin-top:10px;
+}
+#femme
+{
+	text-align:center;
+	margin-top:10px;
+}
+#bébé
+{
+	text-align:center;
+	margin-top:10px;
+}
+#or
+{
+	margin-top: 40px;
+	margin-left: 27px;
+	width : 94px;
+}
+#pierre
+{
+	margin-top: 40px;
+	margin-left: 30px;
+	width : 107px;
+}
+#bois
+{
+	margin-top: 40px;
+	margin-left: 20px;
+	width : 100px;
+
+}
+#maisonBois
+{
+	margin-top: 40px;
+	margin-left: 15px;
+}
+#maisonPierre
+{
+	margin-top: 40px;
+	margin-left: 12px;
+}
+#chateau
+{
+	margin-top: 40px;
+	margin-left: 12px;
+}
+
+#hommeImage
+{
+	margin:0px 15px 0px 15px
+}
+#femmeImage
+{
+	margin:0px 15px 0px 15px
+}
+#bébéImage
+{
+	margin:0px 15px 0px 15px
+}
+
+.stock
+{
+	margin-top: 40px;
+	margin-left: 20px;
+	width : 200px;
+}
+
+#pierreConteneur
+{
+	visibility:hidden;
+}
+#orConteneur
+{
+	visibility:hidden;
+}
+
+#boutonPierreUpgrade
+{
+	visibility:hidden;
+}
+#boutonPierreStockUpgrade
+{
+	visibility:hidden;
+}
+#boutonOrUpgrade
+{
+	visibility:hidden;
+}
+#boutonOrStockUpgrade
+{
+	visibility:hidden;
+}
+#boutonMaisonPierreBuy
+{
+	visibility:hidden;
+}
+#boutonChateauBuy
+{
+	visibility:hidden;
+}
+
+#boutonTrader
+{
+	visibility:hidden;
+}
+
+.trader
+{
+font-size:150%;
+}
+
+em
+{
+	margin: 0px 50px 0px 20px;
+	font-size: 1.5em;
+}
+nav
+{
+	width:266px;
+	height:270px;
+	border: solid black 1px;
+	margin:3px 15px 0px 3px;
+	overflow:auto;
+	display:flex;
+	flex-direction:column;
+}
+
+button
+{
+	margin:1px 1px 1px 1px;
+	width:247px;
+	text-align:left;
+	min-height:40px;
+	height:auto;
+}
+
+#production{
+	max-width:266px;
+	margin:3px 15px 0px 3px;
+	margin-left:5px;
+}
+
+#conteneurColonneGauche{
+	max-width:266px;
+	height:auto;
+	margin:3px 15px 0px 3px;
+}
+
+#populationConteneur{
+	border:dashed 1px black;
+	width:400px;
+	padding : 5px 0px 5px 5px;
+	margin-left:50px;
+}
+
+#acheterPierre
+{
+	margin-top:32px;
+}
+#vendrePierre
+{
+	margin-top:32px;
+}
+#acheterBois
+{
+	margin-top:32px;
+}
+#vendreBois
+{
+	margin-top:32px;
+}
+
+#settings
+{
+	margin-left:10px;
+}
+
+.boutonLangue
+{
+	width:auto;
+}
+
+#badgeConteneur
+{
+	margin-top:40px;
+	height:auto;
+	width:720px;
+	display:flex;
+	text-align:center;
+
+}
+.badgeTexte
+{
+  	display:inline-block;
+  	vertical-align:middle;
+	font-style:"Times New Roman";
+	text-align:left; /* on rétablit l'alignement du texte */
+	font-size:2em;
+	height:30px;
+	margin:25px 10px 0px 30px;
+}
+#badgeImage
+{
+	position:relative;
+	top:40%;
+	height:1;
+	width:1;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+.nomBadge{
+	padding-right:10px;
+}
+
+/*.image
+{
+	border-left:1px solid black;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+
+.nomBadge
+{
+	border-right:1px solid black;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+*/
+
+.hidden
+{
+	visibility: hidden;
+}
+
+#boutonSauvegarder, #boutonCharger
+{
+	visibility:hidden;
+}
+
+@media all and (max-device-width: 1024px) /* Règles pour les smartphones */
+{
+*
+	{
+		zoom:89%;
+	}
+#boutons
+	{
+		zoom:150%;
+		
+	}
+#boutons button
+	{
+		max-width: 220px;
+		margin:0px;
+		height:auto;
+	}
+#settings
+	{
+		position:absolute;
+		bottom:5%;
+		left:5%;
+	}
+#populationConteneur
+	{
+		max-width:310px;
+		position:absolute;
+		bottom:5%;
+		right:5%;
+	}
+table
+	{
+		zoom:200%;
+	}
+nav
+	{
+	width:295px;
+	}
+#badgeConteneur
+	{
+	position:absolute;
+	right:5%;
+	}
+}
+
+@media all and (width: 800px) /* Règles pour kongragate */
+{
+*
+{
+zoom: 95%;
+}
+
+nav
+{
+	width:266px;
+	height:270px;
+	border: solid black 1px;
+	margin:3px 15px 0px 3px;
+	overflow:auto;
+	display:flex;
+	flex-direction:column;
+}
+
+#populationConteneur{
+	border:dashed 1px black;
+	width:400px;
+	padding : 5px 0px 5px 5px;
+	position:fixed;
+	-moz-transform: scale(0.90);
+	-moz-transform-origin: center center;
+	right:1%;
+	bottom:1%;
+	z-index: 3;
+}
+
+#settings
+{
+	position:fixed;
+	left:1%;
+	bottom:1%;
+	z-index: 1;
+}
+
+#production{
+	position:fixed;
+	left:1%;
+	bottom:17%;
+	z-index: 2;
+	margin:0px 0px 0px 3px;
+}
+
+#Ressources{
+	position:fixed;
+	top:-7%;
+	right:-13%;
+	-moz-transform: scale(0.70);
+	-webkit-transform : scale(0.8);
+	-webkit-transform : translate(-120px, 60px);
+}
+
+#conteneur{
+	-moz-transform: scale(0.90);
+}
+}
